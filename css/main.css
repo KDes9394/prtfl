@@ -1,0 +1,52 @@
+.container {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 150px 50px 250px 250px 250px auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      " Header Header"
+      " Menu Menu"
+      " content profile"
+      " content trivia"
+      " content trivia"
+      " border border"
+  }
+  
+  .border {
+      grid-area: border;
+  }
+
+  .Header { 
+      grid-area: Header;
+      background-color: cornflowerblue;
+      font-size: 20px;
+      align-self: center;
+      max-height: full;
+ }
+  
+  .Menu { 
+    grid-area: Menu;
+    background-color: black;
+}
+
+.Menu > div{
+    background-color: cornflowerblue;
+}
+
+  .content{
+      grid-area:content;
+      background-color: coral;    
+              text-align: center;
+  }
+
+  .trivia{grid-area:trivia;}
+  
+  .profile{grid-area: profile}
+
+  .Header > div{
+    background-color: black;
+    max-height: 50vh;
+    align-self: center;
+    border: 1px solid #eee;
+    padding: 2em;
